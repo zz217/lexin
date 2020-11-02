@@ -5,7 +5,9 @@ import hashlib
 import time
 import datetime
 import sys
+import random
 
+#random.randint(1,10)
 
 
 class LexinSport:
@@ -80,7 +82,8 @@ if __name__ == "__main__":
     # 最大运行出错次数
     username = sys.argv[1]
     password = sys.argv[2]
-    step = sys.argv[3]
+    stepMin = sys.argv[3]
+    step=random.randint(stepMin,50000)
     try:
         # 修改步数结果
         result = LexinSport(str(username), str(password), int(step)).change_step()
