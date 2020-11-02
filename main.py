@@ -7,7 +7,6 @@ import datetime
 import sys
 import random
 
-#random.randint(1,10)
 
 
 class LexinSport:
@@ -83,7 +82,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     stepMin = sys.argv[3]
-    step=random.randint(stepMin,50000)
+    step=random.randint(int(stepMin),50000)
     try:
         # 修改步数结果
         result = LexinSport(str(username), str(password), int(step)).change_step()
