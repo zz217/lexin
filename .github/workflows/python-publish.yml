@@ -32,6 +32,7 @@ jobs:
       env:
         TWINE_USERNAME: ${{ secrets.USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PASSWORD }}
-        TWINE_STEP: ${{ secrets.STEP }}
+        TWINE_STEPMIN: ${{ secrets.STEPMIN }}
+        TWINE_STEPMAX: ${{ secrets.STEPMAX }}
       run: |
-        python main.py ${TWINE_USERNAME} ${TWINE_PASSWORD} ${TWINE_STEP}
+        python main.py ${TWINE_USERNAME} ${TWINE_PASSWORD} ${TWINE_STEPMIN} ${TWINE_STEPMAX}
